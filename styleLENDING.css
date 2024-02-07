@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, #e033c9b6, #8c43fb); /* Градієнт від #e033c9b6 до #8c43fb */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.photoTG img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: shimmer 2s infinite; /* Додання анімації блиску */
+}
+
+@keyframes shimmer {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Початкові параметри тіні */
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 1); /* Параметри тіні під час анімації */
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Заключний параметр тіні */
+    }
+}
+
+h1 {
+    margin: 20px 0;
+    color: #414141; /* Колір заголовку */
+    font-size: 32px; /* Розмір шрифту заголовку */
+    font-weight: bold; /* Товщина шрифту */
+    text-transform: uppercase; /* Перетворення тексту на верхній регістр */
+    letter-spacing: 2px; /* Міжлітерний інтервал */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Тінь тексту */
+    animation: pulse 2s infinite; /* Анімація для привертання уваги */
+}
+
+p {
+    margin: 20px 0;
+    font-size: 18px; /* Розмір шрифту абзацу */
+    line-height: 1.5; /* Міжрядковий інтервал */
+    color: #fd58ccaf; /* Колір абзацу */
+}
+
+/* Анімація для заголовку */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.telegram-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0088cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    animation: pulse 2s infinite, blink-bg 2s alternate infinite; /* Додано пульсацію та мерехтіння на фоні */
+}
+
+.telegram-link:hover {
+    background-color: #005580;
+}
+
+/* Анімація пульсації кнопки */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Анімація мерехтіння на фоні */
+@keyframes blink-bg {
+    0% {
+        background-color: #0088cc;
+    }
+    100% {
+        background-color: #005580;
+    }
+}
+
