@@ -2,7 +2,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to bottom, #e033c9b6, #8c43fb); /* Градієнт від #e033c9b6 до #8c43fb */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,10 +43,15 @@ h1 {
 }
 
 p {
-    margin: 20px 0;
-    font-size: 18px; /* Розмір шрифту абзацу */
+    font-size: 24px;
+    color: #f1ee10;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 28px 0;
     line-height: 1.5; /* Міжрядковий інтервал */
-    color: #fd58ccaf; /* Колір абзацу */
+    color: #010313af; /* Колір абзацу */
+    font-weight: bold; /* Жирний текст */
 }
 
 /* Анімація для заголовку */
@@ -103,3 +107,173 @@ p {
     }
 }
 
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover; /* Для адаптивного заповнення */
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 1; /* Забезпечує, що контент буде поверх відео */
+}
+
+/* Медіазапит для мобільних пристроїв */
+@media screen and (max-width: 768px) {
+    #background-video {
+        width: 100%;
+        height: 110%;
+        object-fit: cover;
+    }
+
+    .content {
+        background: linear-gradient(to bottom, #e033c9b6, #8c43fb); /* Прозорий градієнт */
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #ccc;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+ul {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    margin: 0 5px;
+}
+
+ul li a .fa {
+    font-size: 14px; /* Зменшуємо розмір іконок */
+    color: #262626;
+    line-height: 26px; /* Збільшуємо висоту, щоб кнопки були центровані */
+    transition: .5s;
+    padding-right: 4px; /* Зменшуємо відступ */
+}
+
+ul li a span {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 10px; /* Змінюємо відстань від верхньої границі */
+    color: #262626;
+    letter-spacing: 0; /* Зменшуємо відстань між буквами */
+    transition: .5s;
+}
+
+ul li a {
+    text-decoration: none;
+    display: block;
+    width: 88px; /* Зменшуємо ширину кнопок */
+    height: 26px; /* Зменшуємо висоту кнопок */
+    background: #fff;
+    text-align: left;
+    padding-left: 4px; /* Зменшуємо відступ */
+    transform: rotate(-30deg) skew(25deg) translate(0, 0);
+    transition: .5s;
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, .5); /* Зменшуємо тінь */
+}
+
+ul li a:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: -4px; /* Змінюємо відстань від лівого краю */
+    height: 100%;
+    width: 4px; /* Зменшуємо ширину */
+    background: #b1b1b1;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+ul li a:after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Змінюємо відстань від нижньої границі */
+    left: -2px; /* Змінюємо відстань від лівого краю */
+    height: 4px; /* Зменшуємо висоту */
+    width: 100%;
+    background: #b1b1b1;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a:hover {
+    transform: rotate(-30deg) skew(25deg) translate(2px, -2px); /* Зменшуємо значення перекладу */
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, .5); /* Зменшуємо тінь */
+}
+
+ul li:hover .fa {
+    color: #fff;
+}
+
+ul li:hover span {
+    color: #fff;
+}
+
+ul li:hover:nth-child(1) a {
+    background: #3b5998;
+}
+
+ul li:hover:nth-child(1) a:before {
+    background: #365492;
+}
+
+ul li:hover:nth-child(1) a:after {
+    background: #4a69ad;
+}
+
+ul li:hover:nth-child(2) a {
+    background: #00aced;
+}
+
+ul li:hover:nth-child(2) a:before {
+    background: #097aa5;
+}
+
+ul li:hover:nth-child(2) a:after {
+    background: #53b9e0;
+}
+
+ul li:hover:nth-child(3) a {
+    background: #dd4b39;
+}
+
+ul li:hover:nth-child(3) a:before {
+    background: #b33a2b;
+}
+
+ul li:hover:nth-child(3) a:after {
+    background: #e66a5a;
+}
+
+ul li:hover:nth-child(4) a {
+    background: #e4405f;
+}
+
+ul li:hover:nth-child(4) a:before {
+    background: #d81c3f;
+}
+
+ul li:hover:nth-child(4) a:after {
+    background: #e46880;
+}
