@@ -12,11 +12,25 @@ body {
     text-align: center;
 }
 
-.photoTG img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    animation: shimmer 2s infinite; /* Додання анімації блиску */
+.photoTG {
+    width: 250px; /* Розмір кружечка */
+    height: 250px; /* Розмір кружечка */
+    border-radius: 50%; /* Зробити круглий */
+    overflow: hidden; /* Приховати відео, що виходить за межі круга */
+    position: fixed; /* Фіксована позиція */
+    top: 22%; /* Верхня границя на половину сторінки */
+    left: 50%; /* Ліва границя на половину сторінки */
+    transform: translate(-50%, -50%); /* Центрувати кружечок */
+}
+
+.photoTG video {
+    width: 100%; /* Автоматична ширина */
+    height: 100%; /* Повністю заповнюємо батьківський контейнер */
+    position: absolute; /* Позиціонування відео відносно його батьківського контейнера */
+    top: 50%; /* Верхня границя на половину батьківського контейнера */
+    left: 50%; /* Ліва границя на половину батьківського контейнера */
+    transform: translate(-50%, -50%); /* Центрувати відео */
+    object-fit: cover; /* Заповнюємо контейнер */
 }
 
 @keyframes shimmer {
@@ -32,7 +46,9 @@ body {
 }
 
 h1 {
-    margin: 20px 0;
+    margin: 70px 0; /* Зберігаємо значення margin */
+    position: relative; /* Змінюємо позиціонування */
+    top: 70px; /* Встановлюємо відстань від верхнього краю */
     color: #414141; /* Колір заголовку */
     font-size: 32px; /* Розмір шрифту заголовку */
     font-weight: bold; /* Товщина шрифту */
@@ -41,6 +57,7 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Тінь тексту */
     animation: pulse 2s infinite; /* Анімація для привертання уваги */
 }
+
 
 p {
     font-size: 24px;
@@ -151,7 +168,7 @@ body {
 
 ul {
     position: fixed;
-    bottom: 10px;
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
